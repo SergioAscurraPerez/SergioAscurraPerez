@@ -44,7 +44,7 @@ Busco mi primera experiencia profesional en IA aplicada.
 | Proyecto | Qué hace | Stack |
 |---|---|---|
 | [**Sentinela AML**](https://github.com/SergioAscurraPerez/sentinela-aml) | Triaje multiagente de alertas AML con aprobación humana | Python, Streamlit, networkx, scikit-learn |
-| [**Trading algorítmico EURUSD**](https://github.com/SergioAscurraPerez/trading-eurusd) | Señales semanales con LightGBM y datos del COT Report, validadas con walk-forward y Monte Carlo, ejecutadas con MetaTrader 5 en una VM de Azure | Python, LightGBM, Azure |
+| [**Trading algorítmico EURUSD**](https://github.com/SergioAscurraPerez/trading-eurusd) | Señales semanales con LightGBM y datos del COT Report, evaluadas con walk-forward y Monte Carlo; una auditoría de datos descartó una ventaja falsa. Ejecutado con MT5 en una VM de Azure | Python, LightGBM, Azure |
 | **Auditor de sílabos con LLM** | LLM open-source autoalojado que audita sílabos y genera reportes de cumplimiento | Python, pdfplumber, ReportLab |
 
 ---
