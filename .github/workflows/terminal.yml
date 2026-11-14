@@ -25,11 +25,19 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Hace falta un token personal (secreto GH_PAT, scopes read:user y repo) para que
+      # la API devuelva tambien las contribuciones y repos privados. Con el token por
+      # defecto solo se ve lo publico y los graficos saldrian incompletos, asi que en
+      # ese caso no se toca nada.
       - name: Renderizar SVG con la actividad real
         env:
-          # GH_PAT (scope read:user) incluye contribuciones privadas; sin el, solo las publicas.
-          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: python scripts/render.py --login "${{ github.repository_owner }}" --out assets
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GITHUB_TOKEN" ]; then
+            echo "::warning::Falta el secreto GH_PAT; se conservan los graficos actuales."
+            exit 0
+          fi
+          python scripts/render.py --login "${{ github.repository_owner }}" --out assets
 
       - name: Publicar cambios
         run: |
