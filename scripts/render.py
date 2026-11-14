@@ -502,7 +502,7 @@ def render_formacion(t: dict) -> str:
 CONTACTO = dict(
     linkedin_label="linkedin.com/in/sergio-ascurra-perez",
     # El correo no vive en el codigo: se toma de CONTACT_EMAIL (variable de repositorio en Actions).
-    email=os.environ.get("CONTACT_EMAIL") or "abrir el cliente de correo",
+    email=os.environ.get("CONTACT_EMAIL") or "pulsa para escribirme",
 )
 
 

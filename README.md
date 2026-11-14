@@ -60,15 +60,7 @@
   <img alt="Ticket de orden abierta: busco mi primera experiencia profesional en IA aplicada, como práctica, trainee o junior. Disponibilidad inmediata en Lima, Perú, remoto o híbrido." src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/ticket-light.svg" width="100%">
 </picture>
 
-<a href="https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-linkedin-dark.svg">
-  <img alt="F1: LinkedIn" src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-linkedin-light.svg" width="440">
-</picture></a> <a href="mailto:sergioascurra.27102005@gmail.com"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-email-dark.svg">
-  <img alt="F2: Email" src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-email-light.svg" width="440">
-</picture></a>
-
-<sub>[LinkedIn](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/) · [sergioascurra.27102005@gmail.com](mailto:sergioascurra.27102005@gmail.com)</sub>
+[![F1: LinkedIn](https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-linkedin-dark.svg#gh-dark-mode-only)](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/)[![F1: LinkedIn](https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-linkedin-light.svg#gh-light-mode-only)](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/) [![F2: Email](https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-email-dark.svg#gh-dark-mode-only)](mailto:sergioascurra.27102005@gmail.com)[![F2: Email](https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-email-light.svg#gh-light-mode-only)](mailto:sergioascurra.27102005@gmail.com)
 
 <br>
 
