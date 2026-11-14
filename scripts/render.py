@@ -380,6 +380,188 @@ def render_langs(t: dict, langs: list[tuple[str, int]], user: dict) -> str:
     return head(W, H, t, "\n".join(css)) + "".join(out) + "</svg>\n"
 
 
+# ----------------------------------------------------------------------------- formacion y contacto
+
+FORMACION = [  # (modulo, completado)
+    ("Introduction to Universal AI", True),
+    ("Python Coding, parte 1", True),
+    ("Python Coding, parte 2", True),
+    ("Foundations of Data Analytics and ML", True),
+    ("Supervised and Unsupervised Learning", True),
+    ("Foundations of Neural Networks", True),
+    ("Hands-On Deep Learning", True),
+    ("Deep Learning and Computer Vision", True),
+    ("Data-Driven Prescriptive AI", True),
+    ("Model-Driven Prescriptive AI, Part 1", False),
+]
+USMP = dict(carrera="Ingenieria de Computacion y Sistemas", ciclo=8, ciclos=10)
+
+
+def render_formacion(t: dict) -> str:
+    W, H = 900, 348
+    n = len(FORMACION)
+    done = sum(1 for _, d in FORMACION if d)
+    L, R, TOP, BOT = 40, 470, 66, 236   # area de la curva
+    step = 1.8 / n                       # segundos por escalon
+    css = [
+        ".curve{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.8s linear .2s forwards}",
+        "@keyframes draw{to{stroke-dashoffset:0}}",
+        ".m{opacity:0;animation:pop .35s cubic-bezier(.2,.8,.2,1) forwards}",
+        "@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}",
+        ".row{opacity:0;animation:pop .4s ease-out forwards}",
+        ".live{animation:live 1.6s ease-in-out infinite} @keyframes live{50%{opacity:.25}}",
+        ".seg{transform-origin:left;animation:grow .5s cubic-bezier(.2,.8,.2,1) both} @keyframes grow{from{transform:scaleX(0)}}",
+    ]
+    out = []
+    out.append(f'<rect x="1" y="1" width="{W-2}" height="30" fill="{t["frame"]}" opacity="0.55"/>')
+    out.append(mono_text(18, 21, "CURVA DE FORMACION", 13, "ink", weight=700))
+    out.append(mono_text(190, 21, "Universal AI Program  ·  MIT Open Learning  ·  desde may. 2026", 12, "dim"))
+    out.append(mono_text(W - 18, 21, f"{done}/{n} modulos  ·  {done/n*100:.0f}%", 11, "dim", anchor="end"))
+
+    # rejilla
+    for i in range(0, n + 1, 2):
+        y = BOT - (BOT - TOP) * i / n
+        out.append(f'<line x1="{L}" y1="{y:.1f}" x2="{R}" y2="{y:.1f}" stroke="{t["grid"]}"/>')
+        out.append(mono_text(L - 6, y + 4, str(i), 10, "mute", anchor="end"))
+    out.append(mono_text(L, TOP - 14, "modulos completados", 10, "mute"))
+    out.append(mono_text(R, BOT + 16, "secuencia del programa", 10, "mute", anchor="end"))
+
+    # escalera: cada modulo completado sube un peldano
+    sw = (R - L) / n
+    pts = [(L, BOT)]
+    for i, (_, d) in enumerate(FORMACION):
+        x0 = L + i * sw
+        y_prev = pts[-1][1]
+        if d:
+            y_new = BOT - (BOT - TOP) * (i + 1) / n
+            pts += [(x0 + sw * 0.35, y_prev), (x0 + sw * 0.35, y_new), (x0 + sw, y_new)]
+    poly = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    out.append(f'<polyline class="curve" pathLength="1" points="{poly}" fill="none" stroke="{t["up"]}" stroke-width="2" stroke-linejoin="round"/>')
+    # relleno bajo la curva
+    fillpts = poly + f" {pts[-1][0]:.1f},{BOT} {L},{BOT}"
+    out.append(f'<polygon points="{fillpts}" fill="{t["up"]}" opacity="0.07"/>')
+    # modulo en curso: proyeccion punteada
+    nxt = [i for i, (_, d) in enumerate(FORMACION) if not d]
+    if nxt:
+        i = nxt[0]
+        x0 = L + i * sw
+        y_cur = pts[-1][1]
+        y_new = BOT - (BOT - TOP) * (i + 1) / n
+        out.append(f'<polyline class="m" style="animation-delay:{0.2 + step*done + .1:.2f}s" points="{x0:.1f},{y_cur:.1f} {x0 + sw*0.35:.1f},{y_cur:.1f} {x0 + sw*0.35:.1f},{y_new:.1f} {x0 + sw:.1f},{y_new:.1f}" '
+                   f'fill="none" stroke="{t["ink"]}" stroke-width="1.6" stroke-dasharray="3 4"/>')
+        out.append(f'<circle class="m live" style="animation-delay:{0.2 + step*done + .3:.2f}s,{0.2 + step*done + .6:.2f}s" cx="{x0 + sw*0.35:.1f}" cy="{(y_cur + y_new)/2:.1f}" r="4" fill="{t["ink"]}"/>')
+        out.append(mono_text(x0 + sw * 0.35 + 10, y_cur + 16, "en curso", 10,
+                             extra=f'class="m ink" style="animation-delay:{0.2 + step*done + .4:.2f}s"'))
+    # marcadores numerados en cada peldano completado
+    for i, (_, d) in enumerate(FORMACION):
+        if not d:
+            continue
+        x = L + i * sw + sw * 0.35
+        y = BOT - (BOT - TOP) * (i + 1) / n
+        out.append(f'<g class="m" style="animation-delay:{0.2 + step*(i+1):.2f}s">'
+                   f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="{t["bg"]}" stroke="{t["up"]}" stroke-width="1.5"/>'
+                   + mono_text(x, y + 3.5, str(i + 1), 9, anchor="middle", weight=700, extra=f'fill="{t["up"]}"') + "</g>")
+
+    # libro mayor de modulos
+    LX = 500
+    out.append(mono_text(LX, TOP - 14, "libro mayor", 10, "mute"))
+    out.append(mono_text(W - 30, TOP - 14, "estado", 10, "mute", anchor="end"))
+    for i, (name, d) in enumerate(FORMACION):
+        y = TOP + 4 + i * 18
+        dly = 0.2 + step * (i + 1)
+        out.append(f'<g class="row" style="animation-delay:{dly:.2f}s">')
+        out.append(mono_text(LX, y, f"{i+1:02d}", 10, "mute"))
+        out.append(mono_text(LX + 22, y, name, 11, "" if d else "ink", weight=None if d else 700))
+        if d:
+            out.append(mono_text(W - 30, y, "✔ ok", 10, "up", anchor="end"))
+        else:
+            out.append(mono_text(W - 30, y, "▶ en curso", 10, "ink", anchor="end", weight=700))
+        out.append("</g>")
+
+    # posicion USMP: bono que vence al terminar la carrera
+    y0 = 272
+    out.append(f'<line x1="1" y1="{y0 - 12}" x2="{W-1}" y2="{y0 - 12}" stroke="{t["frame"]}"/>')
+    out.append(mono_text(18, y0 + 6, "POSICION USMP", 12, "ink", weight=700))
+    out.append(mono_text(130, y0 + 6, USMP["carrera"], 11))
+    out.append(mono_text(W - 18, y0 + 6, f"ciclo {USMP['ciclo']} de {USMP['ciclos']}  ·  {USMP['ciclo']/USMP['ciclos']*100:.0f}% amortizado", 11, "dim", anchor="end"))
+    bx, bw_, by = 18, W - 36, y0 + 18
+    gap = 4
+    segw = (bw_ - gap * (USMP["ciclos"] - 1)) / USMP["ciclos"]
+    for i in range(USMP["ciclos"]):
+        x = bx + i * (segw + gap)
+        out.append(f'<rect x="{x:.1f}" y="{by}" width="{segw:.1f}" height="14" rx="2" fill="{t["grid"]}"/>')
+        if i < USMP["ciclo"]:
+            col = t["ink"] if i == USMP["ciclo"] - 1 else t["up"]
+            out.append(f'<rect class="seg" style="animation-delay:{0.3 + i*0.08:.2f}s" x="{x:.1f}" y="{by}" width="{segw:.1f}" height="14" rx="2" fill="{col}" opacity="{0.9 if i == USMP["ciclo"]-1 else 0.6}"/>')
+        now = i == USMP["ciclo"] - 1
+        out.append(mono_text(x + segw / 2, by + 28, "ahora" if now else f"c{i+1}", 9, "ink" if now else "mute",
+                             anchor="middle", weight=700 if now else None))
+    return head(W, H, t, "\n".join(css)) + "".join(out) + "</svg>\n"
+
+
+CONTACTO = dict(
+    linkedin_label="linkedin.com/in/sergio-ascurra-perez",
+    # El correo no vive en el codigo: se toma de CONTACT_EMAIL (variable de repositorio en Actions).
+    email=os.environ.get("CONTACT_EMAIL") or "abrir el cliente de correo",
+)
+
+
+def render_ticket(t: dict) -> str:
+    W, H = 900, 238
+    css = [
+        ".row{opacity:0;animation:print .3s ease-out forwards}",
+        "@keyframes print{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}",
+        ".live{animation:live 1.4s ease-in-out infinite} @keyframes live{50%{opacity:.2}}",
+    ]
+    left = [
+        ("activo", "SRGO  ·  Sergio Sebastian Ascurra Perez", ""),
+        ("operacion", "COMPRA  ·  primera experiencia profesional", "up"),
+        ("perfil", "practica, trainee o junior en IA aplicada", ""),
+        ("mercado", "ML aplicado  ·  agentes  ·  desarrollo de software", ""),
+    ]
+    right = [
+        ("validez", "GTC  ·  vigente hasta cancelar", ""),
+        ("disponibilidad", "inmediata", "up"),
+        ("ubicacion", "Lima, PE  ·  remoto o hibrido", ""),
+        ("condicion", "datos reales, trazabilidad y control humano", ""),
+    ]
+    out = []
+    out.append(f'<rect x="1" y="1" width="{W-2}" height="30" fill="{t["frame"]}" opacity="0.55"/>')
+    out.append(mono_text(18, 21, "TICKET DE ORDEN", 13, "ink", weight=700))
+    out.append(mono_text(160, 21, "#SRGO-2026-001", 12, "dim"))
+    out.append(f'<circle class="live" cx="{W-96}" cy="16" r="4" fill="{t["up"]}"/>')
+    out.append(mono_text(W - 18, 21, "ABIERTA", 12, "up", anchor="end", weight=700))
+    for col, x in ((left, 30), (right, 480)):
+        for i, (k, v, cls) in enumerate(col):
+            y = 62 + i * 30
+            out.append(f'<g class="row" style="animation-delay:{0.15 + i*0.18 + (0.09 if x > 100 else 0):.2f}s">')
+            out.append(mono_text(x, y, k, 10, "mute"))
+            out.append(mono_text(x, y + 14, v, 12, cls, weight=700 if cls else None))
+            out.append(f'<line x1="{x}" y1="{y+22}" x2="{x+400}" y2="{y+22}" stroke="{t["grid"]}"/>')
+            out.append("</g>")
+    # perforacion y llamada a la accion
+    y = H - 42
+    out.append(f'<line x1="14" y1="{y}" x2="{W-14}" y2="{y}" stroke="{t["frame"]}" stroke-dasharray="2 5"/>')
+    out.append(f'<g class="row" style="animation-delay:1.1s">'
+               + mono_text(30, y + 26, "ejecutar la orden:", 11, "dim")
+               + mono_text(174, y + 26, "F1 LinkedIn", 11, "ink", weight=700)
+               + mono_text(270, y + 26, "F2 Email", 11, "ink", weight=700)
+               + mono_text(W - 30, y + 26, "sin comision  ·  respuesta en menos de 24 h", 10, "mute", anchor="end")
+               + "</g>")
+    return head(W, H, t, "\n".join(css)) + "".join(out) + "</svg>\n"
+
+
+def render_key(t: dict, fkey: str, title: str, sub: str) -> str:
+    W, H = 440, 64
+    out = []
+    out.append(f'<rect x="12" y="10" width="44" height="44" rx="4" fill="{t["ink"]}"/>')
+    out.append(mono_text(34, 38, fkey, 15, anchor="middle", weight=700, extra=f'fill="{t["tagtext"]}"'))
+    out.append(mono_text(70, 30, title, 14, "ink", weight=700))
+    out.append(mono_text(70, 48, sub, 11, "dim"))
+    out.append(mono_text(W - 16, 38, "↵", 16, "dim", anchor="end"))
+    return head(W, H, t) + "".join(out) + "</svg>\n"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--login", default="SergioAscurraPerez")
@@ -409,6 +591,10 @@ def main() -> None:
             f"header-{name}.svg": render_header(t),
             f"chart-{name}.svg": render_chart(t, series),
             f"langs-{name}.svg": render_langs(t, langs, user),
+            f"formacion-{name}.svg": render_formacion(t),
+            f"ticket-{name}.svg": render_ticket(t),
+            f"key-linkedin-{name}.svg": render_key(t, "F1", "LinkedIn", CONTACTO["linkedin_label"]),
+            f"key-email-{name}.svg": render_key(t, "F2", "Email", CONTACTO["email"]),
         }
         for fn, svg in files.items():
             with open(os.path.join(a.out, fn), "w", encoding="utf-8", newline="\n") as f:

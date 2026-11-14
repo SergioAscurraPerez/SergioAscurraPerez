@@ -32,6 +32,14 @@
 
 ## Formación
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/formacion-dark.svg">
+  <img alt="Curva de formación: 9 de 10 módulos del Universal AI Program de MIT Open Learning completados, el décimo en curso. Ingeniería de Computación y Sistemas en la USMP, ciclo 8 de 10." src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/formacion-light.svg" width="100%">
+</picture>
+
+<details>
+<summary>Ver la formación en texto</summary>
+
 **Universal AI Program, MIT Open Learning.** Desde mayo de 2026, en curso.
 
 | Estado | Módulo |
@@ -41,13 +49,26 @@
 | ✔ | Deep Learning and Computer Vision · Data-Driven Prescriptive AI |
 | ▶ | Model-Driven Prescriptive AI, Part 1 |
 
-**Ingeniería de Computación y Sistemas, USMP.** 8.º ciclo.
+**Ingeniería de Computación y Sistemas, USMP.** 8.º ciclo de 10.
+
+</details>
 
 ## Contacto
 
-Busco mi primera experiencia profesional en IA aplicada.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/ticket-dark.svg">
+  <img alt="Ticket de orden abierta: busco mi primera experiencia profesional en IA aplicada, como práctica, trainee o junior. Disponibilidad inmediata en Lima, Perú, remoto o híbrido." src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/ticket-light.svg" width="100%">
+</picture>
 
-[LinkedIn](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/) · [sergioascurra.27102005@gmail.com](mailto:sergioascurra.27102005@gmail.com)
+<a href="https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-linkedin-dark.svg">
+  <img alt="F1: LinkedIn" src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-linkedin-light.svg" width="440">
+</picture></a> <a href="mailto:sergioascurra.27102005@gmail.com"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-email-dark.svg">
+  <img alt="F2: Email" src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/key-email-light.svg" width="440">
+</picture></a>
+
+<sub>[LinkedIn](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/) · [sergioascurra.27102005@gmail.com](mailto:sergioascurra.27102005@gmail.com)</sub>
 
 <br>
 

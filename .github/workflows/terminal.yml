@@ -32,6 +32,7 @@ jobs:
       - name: Renderizar SVG con la actividad real
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}   # variable de repositorio, opcional
         run: |
           if [ -z "$GITHUB_TOKEN" ]; then
             echo "::warning::Falta el secreto GH_PAT; se conservan los graficos actuales."

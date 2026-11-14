@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="64" viewBox="0 0 440 64" role="img" font-family="'IBM Plex Mono','JetBrains Mono','Cascadia Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace">
+<style>
+text{fill:#E8E2D0}
+.ink{fill:#FFB000} .dim{fill:#8A6100} .mute{fill:#5C4100} .up{fill:#2BD576} .down{fill:#FF4D4D}
+
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+<rect width="440" height="64" rx="6" fill="#000000"/>
+<rect x="0.5" y="0.5" width="439" height="63" rx="6" fill="none" stroke="#1C1C1C"/>
+<rect x="12" y="10" width="44" height="44" rx="4" fill="#FFB000"/><text x="34.0" y="38.0" font-size="15" text-anchor="middle" font-weight="700" textLength="18.0" lengthAdjust="spacingAndGlyphs" fill="#000000">F1</text>
+<text x="70.0" y="30.0" font-size="14" text-anchor="start" font-weight="700" class="ink" textLength="67.2" lengthAdjust="spacingAndGlyphs" >LinkedIn</text>
+<text x="70.0" y="48.0" font-size="11" text-anchor="start" class="dim" textLength="237.6" lengthAdjust="spacingAndGlyphs" >linkedin.com/in/sergio-ascurra-perez</text>
+<text x="424.0" y="38.0" font-size="16" text-anchor="end" class="dim" textLength="9.6" lengthAdjust="spacingAndGlyphs" >↵</text>
+</svg>
