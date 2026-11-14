@@ -1,74 +1,54 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/header-dark.svg">
+  <img alt="Terminal SRGO: Sergio Sebastian Ascurra Perez. Ingeniería de Computación y Sistemas, IA aplicada y desarrollo de software. Lima, Perú." src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/header-light.svg" width="100%">
+</picture>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![LightGBM](https://img.shields.io/badge/LightGBM-2E7D32?style=for-the-badge)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/chart-dark.svg">
+  <img alt="Gráfico de velas japonesas con mi actividad real en GitHub durante las últimas 52 semanas, actualizado cada día." src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/chart-light.svg" width="100%">
+</picture>
 
-# Sergio Sebastian Ascurra Perez
+<sub>Las velas no son decoración: cada una es una semana real de mi actividad en GitHub. El índice SRGO cuenta las contribuciones de los últimos 7 días; una vela verde cierra la semana por encima de donde la abrió. Un <a href="scripts/render.py">script sin dependencias</a> consulta la API de GitHub y redibuja los tres paneles cada madrugada mediante GitHub Actions.</sub>
 
-**Ingeniería de Computación y Sistemas (USMP) · IA aplicada y desarrollo de software · Lima, Perú**
+<br>
 
-Construyo sistemas de IA con datos reales, trazabilidad y control humano.<br>
+## Posiciones abiertas
+
+| Proyecto | Tesis | Resultado | Stack |
+|---|---|---|---|
+| **[Sentinela AML](https://github.com/SergioAscurraPerez/sentinela-aml)** | El triaje de alertas de lavado de activos puede ser multiagente sin perder control humano: 9 agentes descubiertos y verificados mediante NANDA, riesgo calculado de forma determinista fuera del LLM, datos pseudonimizados antes de salir y aprobación humana en cada decisión. | **1.er puesto**, Hack AI Agents Impact 2026 (NTT DATA × Sundai LATAM × Project NANDA, MIT Media Lab) | Python, Streamlit, pandas, networkx, scikit-learn, Ollama / OpenRouter |
+| **[Trading algorítmico EURUSD](https://github.com/SergioAscurraPerez/trading-eurusd)** | Señales semanales con LightGBM a partir del COT Report, validadas con walk-forward y Monte Carlo. | Una auditoría de datos descartó una ventaja que era falsa; el sistema corre en MT5 sobre una VM de Azure | Python, LightGBM, MetaTrader 5, Azure |
+| **Auditor de sílabos con LLM** | Un LLM open-source autoalojado puede auditar sílabos universitarios y emitir reportes de cumplimiento sin enviar datos fuera de la institución. | En uso interno en la Facultad de Medicina Humana de la USMP | Python, pdfplumber, ReportLab |
+
+## Historial
+
+- **Asistente informático (práctica)**, Facultad de Medicina Humana, USMP. Febrero a agosto de 2026. Digitalización de procesos y auditor de sílabos con LLM.
+- **Desarrollador web**, Ceneris E.I.R.L. Sistemas de talento humano, equipos de minería y proyectos con Django, .NET y PostgreSQL. Migré más de 1,000 registros desde hojas de cálculo a PostgreSQL y construí dashboards de HR Analytics con Chart.js.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/langs-dark.svg">
+  <img alt="Libro de órdenes: lenguajes por bytes en mis repositorios." src="https://raw.githubusercontent.com/SergioAscurraPerez/SergioAscurraPerez/main/assets/langs-light.svg" width="100%">
+</picture>
+
+## Formación
+
+**Universal AI Program, MIT Open Learning.** Desde mayo de 2026, en curso.
+
+| Estado | Módulo |
+|---|---|
+| ✔ | Introduction to Universal AI · Python Coding (partes 1 y 2) · Foundations of Data Analytics and Machine Learning |
+| ✔ | Supervised and Unsupervised Learning · Foundations of Neural Networks · Hands-On Deep Learning |
+| ✔ | Deep Learning and Computer Vision · Data-Driven Prescriptive AI |
+| ▶ | Model-Driven Prescriptive AI, Part 1 |
+
+**Ingeniería de Computación y Sistemas, USMP.** 8.º ciclo.
+
+## Contacto
+
 Busco mi primera experiencia profesional en IA aplicada.
 
-![Estudiante @ USMP](https://img.shields.io/badge/Estudiante-USMP_·_8.º_ciclo-1F3A5F?style=flat-square)
-![MIT Open Learning](https://img.shields.io/badge/MIT_Open_Learning-Universal_AI_Program-A31F34?style=flat-square)
-![Hackathon](https://img.shields.io/badge/1.er_puesto-Hack_AI_Agents_Impact_2026-B8860B?style=flat-square)
+[LinkedIn](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/) · [sergioascurra.27102005@gmail.com](mailto:sergioascurra.27102005@gmail.com)
 
-</div>
+<br>
 
----
-
-## 🏆 Destacado
-
-**1.er puesto en el Hack AI Agents Impact** (NTT DATA × Sundai LATAM × Project NANDA, MIT Media Lab), oct. 2026, con **[Sentinela AML](https://github.com/SergioAscurraPerez/sentinela-aml)**: sistema multiagente de triaje de alertas de prevención de lavado de activos en banca.
-
-- Orquesta 9 agentes que un orquestador descubre y verifica mediante NANDA.
-- Calcula el riesgo de forma determinista, sin depender de la salida del LLM.
-- Pseudonimiza los datos antes de enviarlos a cualquier modelo.
-- Exige aprobación humana en cada decisión.
-
-`Python` `Streamlit` `pandas` `networkx` `scikit-learn` `Ollama / OpenRouter`
-
----
-
-## 🛠️ Proyectos
-
-| Proyecto | Qué hace | Stack |
-|---|---|---|
-| [**Sentinela AML**](https://github.com/SergioAscurraPerez/sentinela-aml) | Triaje multiagente de alertas AML con aprobación humana | Python, Streamlit, networkx, scikit-learn |
-| [**Trading algorítmico EURUSD**](https://github.com/SergioAscurraPerez/trading-eurusd) | Señales semanales con LightGBM y datos del COT Report, evaluadas con walk-forward y Monte Carlo; una auditoría de datos descartó una ventaja falsa. Ejecutado con MT5 en una VM de Azure | Python, LightGBM, Azure |
-| **Auditor de sílabos con LLM** | LLM open-source autoalojado que audita sílabos y genera reportes de cumplimiento | Python, pdfplumber, ReportLab |
-
----
-
-## 💼 Experiencia
-
-- **Asistente Informático (práctica)**, Facultad de Medicina Humana USMP · feb.–ago. 2026: digitalización de procesos y auditor de sílabos con LLM.
-- **Desarrollador web**, Ceneris E.I.R.L.: sistemas de talento humano, equipos de minería y proyectos (Django, .NET, PostgreSQL).
-- Migré más de 1,000 registros de hojas de cálculo a PostgreSQL y construí dashboards de HR Analytics con Chart.js.
-
----
-
-## 📚 Aprendiendo
-
-**Universal AI Program, MIT Open Learning** (may. 2026 – en curso)
-
-- ✔ Introduction to Universal AI · Python Coding (partes 1 y 2) · Foundations of Data Analytics and Machine Learning
-- ✔ Supervised and Unsupervised Learning · Foundations of Neural Networks · Hands-On Deep Learning
-- ✔ Deep Learning and Computer Vision · Data-Driven Prescriptive AI
-- ▶ En curso: Model-Driven Prescriptive AI, Part 1
-
----
-
-## 📫 Contacto
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-ascurra-perez-14002440b/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sergioascurra.27102005@gmail.com)
+<sub>Paneles regenerados a diario por <a href=".github/workflows/terminal.yml">GitHub Actions</a>. Los SVG se animan sin JavaScript y respetan <code>prefers-reduced-motion</code>; el modo claro u oscuro sigue el de tu GitHub.</sub>
