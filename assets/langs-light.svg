@@ -16,23 +16,23 @@ text{fill:#1E1B16}
 <text x="870.0" y="56.0" font-size="10" text-anchor="end" class="mute" textLength="24.0" lengthAdjust="spacingAndGlyphs" >peso</text>
 <text x="30.0" y="80.0" font-size="12" text-anchor="start" font-weight="700" class="ink" textLength="115.2" lengthAdjust="spacingAndGlyphs" >Jupyter Notebook</text>
 <rect x="160" y="69" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:0ms" x="160" y="69" width="480.0" height="14" fill="#118A4A" opacity="1.00"/><text x="750.0" y="80.0" font-size="11" text-anchor="end" class="dim" textLength="59.4" lengthAdjust="spacingAndGlyphs" >8.428.574</text>
-<text x="870.0" y="80.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" > 65.8%</text>
+<text x="870.0" y="80.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" > 64.9%</text>
 <text x="30.0" y="106.0" font-size="12" text-anchor="start" textLength="43.2" lengthAdjust="spacingAndGlyphs" >Python</text>
-<rect x="160" y="95" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:90ms" x="160" y="95" width="93.0" height="14" fill="#9A5B00" opacity="0.77"/><text x="750.0" y="106.0" font-size="11" text-anchor="end" class="dim" textLength="59.4" lengthAdjust="spacingAndGlyphs" >1.632.379</text>
+<rect x="160" y="95" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:90ms" x="160" y="95" width="93.7" height="14" fill="#9A5B00" opacity="0.77"/><text x="750.0" y="106.0" font-size="11" text-anchor="end" class="dim" textLength="59.4" lengthAdjust="spacingAndGlyphs" >1.645.586</text>
 <text x="870.0" y="106.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" > 12.7%</text>
 <text x="30.0" y="132.0" font-size="12" text-anchor="start" textLength="57.6" lengthAdjust="spacingAndGlyphs" >GDScript</text>
-<rect x="160" y="121" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:180ms" x="160" y="121" width="77.5" height="14" fill="#9A5B00" opacity="0.69"/><text x="750.0" y="132.0" font-size="11" text-anchor="end" class="dim" textLength="59.4" lengthAdjust="spacingAndGlyphs" >1.360.091</text>
-<text x="870.0" y="132.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" > 10.6%</text>
+<rect x="160" y="121" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:180ms" x="160" y="121" width="81.9" height="14" fill="#9A5B00" opacity="0.69"/><text x="750.0" y="132.0" font-size="11" text-anchor="end" class="dim" textLength="59.4" lengthAdjust="spacingAndGlyphs" >1.437.389</text>
+<text x="870.0" y="132.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" > 11.1%</text>
 <text x="30.0" y="158.0" font-size="12" text-anchor="start" textLength="72.0" lengthAdjust="spacingAndGlyphs" >JavaScript</text>
-<rect x="160" y="147" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:270ms" x="160" y="147" width="45.3" height="14" fill="#9A5B00" opacity="0.61"/><text x="750.0" y="158.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >795.775</text>
-<text x="870.0" y="158.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  6.2%</text>
+<rect x="160" y="147" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:270ms" x="160" y="147" width="47.3" height="14" fill="#9A5B00" opacity="0.61"/><text x="750.0" y="158.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >830.408</text>
+<text x="870.0" y="158.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  6.4%</text>
 <text x="30.0" y="184.0" font-size="12" text-anchor="start" textLength="72.0" lengthAdjust="spacingAndGlyphs" >TypeScript</text>
 <rect x="160" y="173" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:360ms" x="160" y="173" width="18.0" height="14" fill="#9A5B00" opacity="0.53"/><text x="750.0" y="184.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >316.530</text>
-<text x="870.0" y="184.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  2.5%</text>
+<text x="870.0" y="184.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  2.4%</text>
 <text x="30.0" y="210.0" font-size="12" text-anchor="start" textLength="28.8" lengthAdjust="spacingAndGlyphs" >HTML</text>
-<rect x="160" y="199" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:450ms" x="160" y="199" width="10.2" height="14" fill="#9A5B00" opacity="0.45"/><text x="750.0" y="210.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >178.844</text>
-<text x="870.0" y="210.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  1.4%</text>
+<rect x="160" y="199" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:450ms" x="160" y="199" width="11.1" height="14" fill="#9A5B00" opacity="0.45"/><text x="750.0" y="210.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >195.471</text>
+<text x="870.0" y="210.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  1.5%</text>
 <text x="30.0" y="236.0" font-size="12" text-anchor="start" textLength="21.6" lengthAdjust="spacingAndGlyphs" >CSS</text>
-<rect x="160" y="225" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:540ms" x="160" y="225" width="5.9" height="14" fill="#9A5B00" opacity="0.37"/><text x="750.0" y="236.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >104.264</text>
-<text x="870.0" y="236.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  0.8%</text>
+<rect x="160" y="225" width="480" height="14" fill="#E3DFD2"/><rect class="bar" style="animation-delay:540ms" x="160" y="225" width="7.7" height="14" fill="#9A5B00" opacity="0.37"/><text x="750.0" y="236.0" font-size="11" text-anchor="end" class="dim" textLength="46.2" lengthAdjust="spacingAndGlyphs" >134.895</text>
+<text x="870.0" y="236.0" font-size="12" text-anchor="end" textLength="43.2" lengthAdjust="spacingAndGlyphs" >  1.0%</text>
 </svg>
